@@ -5,14 +5,24 @@ body{
     margin: 0;
 }
 
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+*{
+    font-family: 'Product Sans';
+}
+
 .header{
     border: 2px solid red;
 
     h1{
-        color: blue;
+        // color: blue;
         text-align: center;
         // display: inline-block;
-        border: 2px solid black;
         padding: 10px;
         margin: 0;
     }
