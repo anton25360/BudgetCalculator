@@ -1,5 +1,5 @@
-<form class="addItemForm">
+<form #itemForm='ngForm' (ngSubmit)='onSubmit(itemForm)' class="addItemForm">
     <input type="number" class="input" placeholder="Amount" style="width: 100px;">
     <input type="text" class="input" placeholder="Description" style="width: 400px;">
-    <button>Add</button>
+    <button type="submit">Add</button>
 </form>
