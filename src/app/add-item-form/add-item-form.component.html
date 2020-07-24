@@ -1,8 +1,8 @@
 <form #itemForm='ngForm' (ngSubmit)='onSubmit(itemForm)' class="addItemForm">
 
-    <input type="number" class="input" placeholder="Amount" style="width: 100px;">
-    <input type="text" class="input" placeholder="Description" style="width: 400px;">
+    <input name="amount" type="number" class="input" placeholder="Amount" style="width: 100px;" [ngModel]='item.amount'>
+    <input name="desc" type="text" class="input" placeholder="Description" style="width: 400px;" [ngModel]='item.desc'>
 
     <button type="submit">Add</button>
-    
+
 </form>
