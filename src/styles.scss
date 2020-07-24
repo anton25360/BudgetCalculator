@@ -118,6 +118,13 @@ body{
     margin-bottom: 15px;
     position: relative;
 
+    &:hover{
+        .deleteIcon{
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
     .desc{
         flex-grow: 1;
         margin-left:5px;
@@ -139,17 +146,13 @@ body{
         top: -15px;
         background-color: $dark;
         background-image: url('/assets/delete_icon.svg');
-
-        transition: opacity 0.2s ease-in, transform 0.2s ease-out;
-
+        transition: opacity 0.2s ease-out, transform 0.2s ease-out;
         transform: scale(0);
         opacity: 0;
-    }
+        cursor: pointer;
 
-    &:hover{
-        .deleteIcon{
-            opacity: 1;
-            transform: scale(1);
+        &:hover{
+            transform: scale(1.2);
         }
     }
 }
