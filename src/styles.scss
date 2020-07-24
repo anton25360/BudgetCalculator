@@ -60,24 +60,24 @@ body{
     }
 }
 
-//addItems
-.addItems{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .addItemsContainer{
-        width: 680px;
-    }
-}
 
 //form
 .addItemForm{
     // border: 2px solid $red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .input{
         background-color: $light-grey;
         padding: 10px;
+        margin-right: 20px;
+        border: none;
+    }
+
+    button{
+        background-color: rgb(215,180,250);
+        padding: 10px 20px;
         border: none;
     }
 }
