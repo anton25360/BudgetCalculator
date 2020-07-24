@@ -118,6 +118,8 @@ body{
     display: flex;
     width: 290px;
     border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
 
     .desc{
         flex-grow: 1;
@@ -129,6 +131,13 @@ body{
         margin: 8px;
         padding: 8px;
         border-radius: 3px;
+    }
+
+    .deleteIcon{
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        background-color: red;
     }
 }
 
