@@ -143,6 +143,7 @@ body{
         transition: opacity 0.2s ease-in, transform 0.2s ease-out;
 
         transform: scale(0);
+        opacity: 0;
     }
 
     &:hover{
