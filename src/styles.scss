@@ -139,6 +139,9 @@ body{
         top: -15px;
         background-color: $dark;
         background-image: url('/assets/delete_icon.svg');
+
+        transition: opacity 0.2s ease-in, transform 0.2s ease-out;
+
         transform: scale(0);
     }
 
