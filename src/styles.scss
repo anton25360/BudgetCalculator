@@ -84,5 +84,36 @@ body{
 
 //income & expenses (component)
 .itemListContainer{
-    border: 2px solid red;
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+
+    .incomeColumn, .expensesColumn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        // border: 2px solid blue;
+        width: 320px;
+
+        h1{
+            font-size: 20px;
+            text-transform: uppercase;
+            // align-self: flex-start;
+        }
+    }
+
+    .incomeColumn{
+        h1{color: $green;}
+    }
+
+    .expensesColumn{
+        h1{color: $red;}
+    }
+
 }
