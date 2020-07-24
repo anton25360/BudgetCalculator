@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
+//vars
+$dark: rgb(30, 30, 53);
+$green: #00cc86;
+$light-green: #bafacd;
+$red: #dc3900;
+$light-red: #ffe5e3;
+
 body{
     padding: 0;
     margin: 0;
@@ -31,9 +38,9 @@ body{
 
 //totalBudget
 .totalBudget{
-    border: 1px solid rgb(30, 30, 53);
+    border: 1px solid $dark;
     height: 250px;
-    background-color: rgb(30, 30, 53);
+    background-color: $dark;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,5 +49,13 @@ body{
         color: white;
         font-size: 50px;
         font-weight: 100;
+    }
+
+    &.green{
+        color: $green;
+    }
+
+    &.red{
+        color: $red;
     }
 }
