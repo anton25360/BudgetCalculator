@@ -138,6 +138,15 @@ body{
         right: -15px;
         top: -15px;
         background-color: $dark;
+        background-image: url('/assets/delete_icon.svg');
+        transform: scale(0);
+    }
+
+    &:hover{
+        .deleteIcon{
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 }
 
