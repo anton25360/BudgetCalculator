@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddItemFormComponent } from './add-item-form/add-item-form.component';
 import { ItemListComponent } from './item-list/item-list.component';
-import { ItenCardComponent } from './iten-card/iten-card.component';
 import { ItemCardComponent } from './item-card/item-card.component';
 
 @NgModule({
@@ -13,7 +12,6 @@ import { ItemCardComponent } from './item-card/item-card.component';
     AppComponent,
     AddItemFormComponent,
     ItemListComponent,
-    ItenCardComponent,
     ItemCardComponent
   ],
   imports: [
