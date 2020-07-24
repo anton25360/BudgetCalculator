@@ -82,23 +82,23 @@ body{
     }
 }
 
-//income & expenses (component)
+//income & expenses columns (component)
 .itemListContainer{
-    // border: 2px solid red;
+    border: 2px solid red;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+    // align-items: center;
+    // height: 100%;
+    // width: 100%;
 
 
     .incomeColumn, .expensesColumn {
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         align-items: center;
         flex-direction: column;
 
-        // border: 2px solid blue;
+        border: 2px solid blue;
         width: 320px;
 
         h1{
@@ -116,4 +116,47 @@ body{
         h1{color: $red;}
     }
 
+}
+
+//item card (component)
+.itemCard{
+    // border: 2px solid red;
+    background-color: $light-grey;
+    display: flex;
+    // padding: 0px;
+    // margin: 0px;
+    width: 290px;
+    border-radius: 5px;
+
+    .desc{
+        flex-grow: 1;
+        margin-left:5px;
+
+        // font-size: 18px;
+        // margin: 0;
+        // padding: 0;
+    }
+
+    .amount{
+        padding: 5px;
+        border-radius: 3px;
+    }
+}
+
+.income{
+    .desc{
+        color: $green;
+    }
+    .amount{
+        background-color: $light-green;
+    }
+}
+
+.expense{
+    .desc{
+        color: $red;
+    }
+    .amount{
+        background-color: $light-red;
+    }
 }
