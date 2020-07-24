@@ -60,13 +60,13 @@ body{
     }
 }
 
-
-//form
+//form (component)
 .addItemForm{
     // border: 2px solid $red;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 15px;
 
     .input{
         background-color: $light-grey;
@@ -81,3 +81,4 @@ body{
         border: none;
     }
 }
+
