@@ -87,14 +87,9 @@ body{
     border: 2px solid red;
     display: flex;
     justify-content: center;
-    // align-items: center;
-    // height: 100%;
-    // width: 100%;
-
 
     .incomeColumn, .expensesColumn {
         display: flex;
-        // justify-content: center;
         align-items: center;
         flex-direction: column;
 
@@ -104,7 +99,6 @@ body{
         h1{
             font-size: 20px;
             text-transform: uppercase;
-            // align-self: flex-start;
         }
     }
 
@@ -120,25 +114,18 @@ body{
 
 //item card (component)
 .itemCard{
-    // border: 2px solid red;
     background-color: $light-grey;
     display: flex;
-    // padding: 0px;
-    // margin: 0px;
     width: 290px;
     border-radius: 5px;
 
     .desc{
         flex-grow: 1;
         margin-left:5px;
-
-        // font-size: 18px;
         margin: 16px;
-        // padding: 0;
     }
 
     .amount{
-        // padding: 5px;
         margin: 8px;
         padding: 8px;
         border-radius: 3px;
