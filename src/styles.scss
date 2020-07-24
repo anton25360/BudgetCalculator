@@ -84,7 +84,6 @@ body{
 
 //income & expenses columns (component)
 .itemListContainer{
-    border: 2px solid red;
     display: flex;
     justify-content: center;
 
@@ -92,8 +91,6 @@ body{
         display: flex;
         align-items: center;
         flex-direction: column;
-
-        border: 2px solid blue;
         width: 320px;
 
         h1{
@@ -118,7 +115,7 @@ body{
     display: flex;
     width: 290px;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     position: relative;
 
     .desc{
@@ -137,7 +134,10 @@ body{
         position: absolute;
         height: 30px;
         width: 30px;
-        background-color: red;
+        border-radius: 50%;
+        right: -15px;
+        top: -15px;
+        background-color: $dark;
     }
 }
 
