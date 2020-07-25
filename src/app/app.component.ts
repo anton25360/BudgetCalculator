@@ -9,13 +9,13 @@ import { ItemCard } from 'src/shared/models/item-card.model';
 export class AppComponent implements OnInit {
   title = 'BudgetCalculator';
 
-  items:ItemCard[] = new Array<ItemCard>() //array stores all items
+  itemsArray:ItemCard[] = new Array<ItemCard>() //array stores all items
 
   constructor() {}
 
   ngOnInit() {}
 
   addItem(newItem:ItemCard) {
-    this.items.push(newItem) //inserts new item into array
+    this.itemsArray.push(newItem) //inserts newItem into itemsArray
   }
 }
