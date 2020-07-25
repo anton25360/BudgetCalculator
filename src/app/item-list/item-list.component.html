@@ -2,8 +2,11 @@
 
     <div class="incomeColumn">
         <h1>Income</h1>
-        <app-item-card [isIncome]=true></app-item-card>
-        <app-item-card [isIncome]=true></app-item-card>
+
+        <div *ngFor='let item of itemsArray'> <!-- for loop -->
+            <app-item-card *ngIf='item.amount>= 0' [isIncome]=true></app-item-card> <!-- ngIf = only items greater than zero will be displayed -->
+        </div>
+
     </div>
 
     <div class="expensesColumn">

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ItemCard } from 'src/shared/models/item-card.model';
 
 @Component({
   selector: 'app-item-list',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item-list.component.scss']
 })
 export class ItemListComponent implements OnInit {
+
+  @Input() itemsArray:ItemCard[] //array of items
 
   constructor() { }
 
