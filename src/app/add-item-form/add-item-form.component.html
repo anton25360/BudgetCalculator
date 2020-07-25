@@ -3,6 +3,6 @@
     <input required name="amount" type="number" class="input" placeholder="Amount" style="width: 100px;" [ngModel]='item.amount'> <!-- ngModel binds the values to the itemCard object -->
     <input required name="desc" type="text" class="input" placeholder="Description" style="width: 400px;" [ngModel]='item.desc'> <!-- ngModel binds the values to the itemCard object -->
 
-    <button type="submit" [disabled]=!itemForm.valid>Add</button> <!-- button is disabled when for is invalid -->
+    <button type="submit" [disabled]=!itemForm.valid>Add</button> <!-- button is disabled when form is invalid -->
 
 </form>
