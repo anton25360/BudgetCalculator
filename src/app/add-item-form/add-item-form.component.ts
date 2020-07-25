@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ItemCard } from 'src/shared/models/item-card.model';
 
@@ -10,6 +10,7 @@ import { ItemCard } from 'src/shared/models/item-card.model';
 export class AddItemFormComponent implements OnInit {
 
   @Input() item: ItemCard = new ItemCard('', null)
+  @Output() formSubmit: EventEmitter<ItemCard> = new EventEmitter<ItemCard>()//eventEmitter sends form values to columns 
 
   constructor() { }
 
