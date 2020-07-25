@@ -17,8 +17,9 @@ export class AddItemFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(form:NgForm) {
+  onSubmit(form:NgForm) { //btn pressed
     console.log(form);
+    this.formSubmit.emit(form.value)
     
   }
 
