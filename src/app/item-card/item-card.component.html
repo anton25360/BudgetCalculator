@@ -1,4 +1,4 @@
-<div class="itemCard" [ngClass]="{ 'income': isIncome, 'expense': !isIncome }">
+<div class="itemCard" [ngClass]="{ 'income': item.amount >= 0, 'expense': item.amount < 0 }">
 
         <p class="desc">{{item.desc}}</p>
 

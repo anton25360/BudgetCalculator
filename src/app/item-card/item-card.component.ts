@@ -8,6 +8,7 @@ import { ItemCard } from 'src/shared/models/item-card.model';
 })
 export class ItemCardComponent implements OnInit {
 
+  // @Input() isIncome:boolean = false
   @Input() item: ItemCard
 
   constructor() { }
