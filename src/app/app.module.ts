@@ -9,6 +9,7 @@ import { ItemListComponent } from './item-list/item-list.component';
 import { ItemCardComponent } from './item-card/item-card.component';
 import { from } from 'rxjs';
 import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ItemCard } from 'src/shared/models/item-card.model';
 
 @Component({
   selector: 'app-edit-item-modal',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditItemModalComponent implements OnInit {
 
+  @Input() item:ItemCard
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmitted(updatedItem:ItemCard){
+
   }
 
 }
