@@ -9,12 +9,21 @@ import { ItemCard } from 'src/shared/models/item-card.model';
 })
 export class AddItemFormComponent implements OnInit {
 
-  @Input() item: ItemCard = new ItemCard('', null)
+  @Input() item: ItemCard
   @Output() formSubmit: EventEmitter<ItemCard> = new EventEmitter<ItemCard>()//eventEmitter sends form values to columns 
+
+  isNewItem:boolean 
 
   constructor() { }
 
   ngOnInit(): void {
+    if (this.item) {
+      //if item has a value (existing item)
+      this.isNewItem = false
+    } else {
+      this.isNewItem = true
+      this.item = new ItemCard('', null)
+    }
   }
 
   onSubmit(form:NgForm) { //btn pressed
