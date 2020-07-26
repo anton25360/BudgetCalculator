@@ -11,6 +11,9 @@ import { from } from 'rxjs';
 import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatDialogModule} from '@angular/material/dialog'; //dialog?
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
