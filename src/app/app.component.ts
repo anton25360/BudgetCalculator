@@ -18,10 +18,14 @@ export class AppComponent implements OnInit {
 
   addItem(newItem:ItemCard) {
     this.itemsArray.push(newItem) //inserts newItem into itemsArray
+    this.totalBudget += newItem.amount
   }
 
   deleteItem(item:ItemCard) {
     let index = this.itemsArray.indexOf(item) //gets index of item to delete from the array
     this.itemsArray.splice(index, 1) //removes ONE item from the array
+
+    this.totalBudget -= item.amount
+
   }
 }
