@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ItemCard } from 'src/shared/models/item-card.model';
-import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialogModule, MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-item-list',
@@ -12,7 +12,7 @@ export class ItemListComponent implements OnInit {
   @Input() itemsArray:ItemCard[] //array of items
   @Output() delete:EventEmitter<ItemCard> = new EventEmitter<ItemCard>()
 
-  constructor(public dialog:MatDialogModule) { }
+  constructor(public dialog:MatDialog) { }
 
   ngOnInit(): void {
   }
