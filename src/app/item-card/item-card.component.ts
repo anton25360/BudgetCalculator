@@ -11,6 +11,7 @@ export class ItemCardComponent implements OnInit {
   // @Input() isIncome:boolean = false
   @Input() item: ItemCard
   @Output() xButtonClick:EventEmitter<any> = new EventEmitter<any>() //any means there is no  data to send
+  @Output() cardClick:EventEmitter<any> = new EventEmitter<any>() //any means there is no  data to send
 
   constructor() { }
 
@@ -19,6 +20,10 @@ export class ItemCardComponent implements OnInit {
 
   onXButtonClick() {
     this.xButtonClick.emit()    
+  }
+
+  onCardClick(){
+    this.cardClick.emit()
   }
 
 }
