@@ -8,13 +8,15 @@ import { AddItemFormComponent } from './add-item-form/add-item-form.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { ItemCardComponent } from './item-card/item-card.component';
 import { from } from 'rxjs';
+import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddItemFormComponent,
     ItemListComponent,
-    ItemCardComponent
+    ItemCardComponent,
+    EditItemModalComponent
   ],
   imports: [
     BrowserModule,
