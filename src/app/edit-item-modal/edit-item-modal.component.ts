@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, inject, Inject } from '@angular/core';
 import { ItemCard } from 'src/shared/models/item-card.model';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-edit-item-modal',
@@ -8,15 +9,18 @@ import { ItemCard } from 'src/shared/models/item-card.model';
 })
 export class EditItemModalComponent implements OnInit {
 
-  @Input() item:ItemCard
+  // @Input() item:ItemCard
 
-  constructor() { }
+  constructor(
+    public dialogRef:MatDialogRef<EditItemModalComponent>,
+    @Inject(MAT_DIALOG_DATA) public item:ItemCard
+    ) { }
 
   ngOnInit(): void {
   }
 
   onSubmitted(updatedItem:ItemCard){
-
+    this.dialogRef.close(updatedItem) //passes updated item to parent
   }
 
 }
