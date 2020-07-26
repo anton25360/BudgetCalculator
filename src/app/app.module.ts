@@ -11,7 +11,7 @@ import { from } from 'rxjs';
 import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatDialogModule} from '@angular/material/dialog'; //dialog?
+import { MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
