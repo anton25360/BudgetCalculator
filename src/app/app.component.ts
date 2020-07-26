@@ -7,9 +7,10 @@ import { ItemCard } from 'src/shared/models/item-card.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'BudgetCalculator';
 
+  title = 'BudgetCalculator';
   itemsArray:ItemCard[] = new Array<ItemCard>() //array stores all items
+  totalBudget:number = 0
 
   constructor() {}
 
