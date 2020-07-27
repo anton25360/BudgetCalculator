@@ -9,11 +9,6 @@ import { EditItemModalComponent } from '../edit-item-modal/edit-item-modal.compo
   styleUrls: ['./item-list.component.scss']
 })
 
-export interface UpdateEvent {
-  old:ItemCard
-  new:ItemCard
-}
-
 export class ItemListComponent implements OnInit {
 
   @Input() itemsArray:ItemCard[] //array of items
@@ -47,4 +42,9 @@ export class ItemListComponent implements OnInit {
       }
     })
   }
+}
+
+export interface UpdateEvent {
+  old:ItemCard
+  new:ItemCard
 }
