@@ -10,14 +10,15 @@ import { EditItemModalComponent } from '../edit-item-modal/edit-item-modal.compo
 })
 
 interface UpdateEvent {
-
+  old:ItemCard
+  new:ItemCard
 }
 
 export class ItemListComponent implements OnInit {
 
   @Input() itemsArray:ItemCard[] //array of items
   @Output() delete:EventEmitter<ItemCard> = new EventEmitter<ItemCard>()
-  @Output() update:EventEmitter< any> = new EventEmitter<any>()
+  @Output() update:EventEmitter< UpdateEvent> = new EventEmitter<UpdateEvent >()
 
   constructor(public dialog:MatDialog) { }
 
@@ -35,11 +36,14 @@ export class ItemListComponent implements OnInit {
       data: item
     })
 
-    //check if result has a value
     dialogRef.afterClosed().subscribe(result => {
+      //check if result has a value
       if (result) {
-        //replace item with updaed values from the form
-        this.itemsArray[this.itemsArray.indexOf(item)] = result //result is the updated item
+        
+        this.update.emit({
+          old:item,
+          new:result //result is the updated item
+        })
       }
     })
   }
