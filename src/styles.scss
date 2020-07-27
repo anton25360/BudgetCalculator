@@ -153,7 +153,7 @@ body{
         right: -15px;
         top: -15px;
         background-color: $dark;
-        background-image: url('src/assets/delete_icon.svg');
+        background-image: url('/src/assets/delete_icon.svg');
         transition: opacity 0.2s ease-out, transform 0.2s ease-out;
         transform: scale(0);
         opacity: 0;
