@@ -9,7 +9,7 @@ import { EditItemModalComponent } from '../edit-item-modal/edit-item-modal.compo
   styleUrls: ['./item-list.component.scss']
 })
 
-interface UpdateEvent {
+export interface UpdateEvent {
   old:ItemCard
   new:ItemCard
 }
@@ -39,7 +39,7 @@ export class ItemListComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       //check if result has a value
       if (result) {
-        
+
         this.update.emit({
           old:item,
           new:result //result is the updated item
