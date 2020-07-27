@@ -32,5 +32,9 @@ export class AppComponent implements OnInit {
   updateItem(updateEvent:UpdateEvent) {
     // replaces old item with updated version
     this.itemsArray[this.itemsArray.indexOf(updateEvent.old)] = updateEvent.new
+
+    //update totalBudget value
+    this.totalBudget -= updateEvent.old.amount //removes old value
+    this.totalBudget += updateEvent.new.amount //adds the new one
   }
 }
