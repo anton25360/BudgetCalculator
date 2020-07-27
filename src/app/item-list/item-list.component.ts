@@ -8,10 +8,16 @@ import { EditItemModalComponent } from '../edit-item-modal/edit-item-modal.compo
   templateUrl: './item-list.component.html',
   styleUrls: ['./item-list.component.scss']
 })
+
+interface UpdateEvent {
+
+}
+
 export class ItemListComponent implements OnInit {
 
   @Input() itemsArray:ItemCard[] //array of items
   @Output() delete:EventEmitter<ItemCard> = new EventEmitter<ItemCard>()
+  @Output() update:EventEmitter< any> = new EventEmitter<any>()
 
   constructor(public dialog:MatDialog) { }
 
