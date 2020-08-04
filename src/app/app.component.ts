@@ -18,15 +18,36 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {}
 
+  sortArray() {
+    console.log(this.itemsArray);
+
+    function compare( a, b ) {
+      if ( a.desc < b.desc ){
+        return -1;
+      }
+      if ( a.desc > b.desc ){
+        return 1;
+      }
+      return 0;
+    }
+    
+    this.itemsArray.sort( compare );
+    
+  }
+
   addItem(newItem:ItemCard) {
     this.itemsArray.push(newItem) //inserts newItem into itemsArray
     this.totalBudget += newItem.amount //changes totalBudget amount
+
+    this.sortArray()
   }
 
   deleteItem(item:ItemCard) {
     let index = this.itemsArray.indexOf(item) //gets index of item to delete from the array
     this.itemsArray.splice(index, 1) //removes ONE item from the array
     this.totalBudget -= item.amount //changes totalBudget amount
+
+    this.sortArray()
   }
 
   updateItem(updateEvent:UpdateEvent) {
@@ -36,5 +57,7 @@ export class AppComponent implements OnInit {
     //update totalBudget value
     this.totalBudget -= updateEvent.old.amount //removes old value
     this.totalBudget += updateEvent.new.amount //adds the new one
+
+    this.sortArray()
   }
 }
