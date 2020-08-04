@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
       return 0;
     }
     
-    this.itemsArray.sort( compare );
+    this.itemsArray.sort(compare);
     
   }
 
