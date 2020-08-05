@@ -22,10 +22,10 @@ export class AppComponent implements OnInit {
     console.log(this.itemsArray);
 
     function compare( a, b ) {
-      if ( a.desc < b.desc ){
+      if ( a.amount < b.amount ){
         return -1;
       }
-      if ( a.desc > b.desc ){
+      if ( a.amount > b.amount ){
         return 1;
       }
       return 0;
